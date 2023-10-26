@@ -1,23 +1,17 @@
 import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { MenuComponent } from '../menu/menu.component';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  close: boolean = false
-  constructor(public dialog: MatDialog) { }
+  toggle: boolean = false
+  constructor(private router: Router) {
 
-  openDialog(): void {
-    this.close = true
-    const dialogRef = this.dialog.open(MenuComponent, {
-      width: '400px'
-    });
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      this.close = false
-    });
+  }
+  nagation(nav: string) {
+    this.router.navigate([nav]);
   }
 }

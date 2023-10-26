@@ -2,21 +2,21 @@
     <div class="p-5 flex items-center justify-between">
         <div class="space-x-4">
             <div class="desktop-view flex">
-                <a href="#" class="mx-4 text-white no-underline font-bold box active">Home
+                <a routerLink="" class="mx-4 text-white no-underline font-bold box active">Home
                     <div class="border-bottom border-2 line">
                     </div>
                 </a>
-                <a href="#" class="mx-4 text-white no-underline font-bold box">About
+                <a routerLink="./about" class="mx-4 text-white no-underline font-bold box">About
                     <div class="border-bottom border-2 line">
                     </div>
                 </a>
-                <a href="#" class="mx-4 text-white no-underline font-bold box">Projects
+                <a routerLink="./project" class="mx-4 text-white no-underline font-bold box">Projects
                     <div class="border-bottom border-2 line">
                     </div>
                 </a>
             </div>
             <div class="mobile-view">
-                <button class="flex-col justify-center items-center">
+                <button class="flex-col justify-center items-center" (click)="toggle=!toggle">
                     <span class="bg-white block h-0.5 w-6 rounded-sm">
                     </span>
                     <span class="bg-white block h-0.5 w-6 rounded-sm my-[3px] opacity-100">
@@ -44,23 +44,25 @@
         </div>
     </div>
 </div>
-
-<div class="fixed top-1/2 left-1/2 flex justify-center items-center transform -translate-x-1/2 -translate-y-1/2 h-[60vh] w-[calc(100vw-100px)] z-10 flex-col"
-    style="background: #ffffffc4;">
-    <div class="flex flex-col gap-3 text-center">
-        <a href="#" class="mx-4 text-black text-xl no-underline" [ngClass]="{ 'border-b-2 border-black': true }">
-            Home
-        </a>
-        <a href="#" class="mx-4 text-black text-xl no-underline">
-            About
-        </a>
-        <a href="#" class="mx-4 text-black text-xl no-underline">Projects
-        </a>
+<ng-container *ngIf="toggle">
+    <div class="fixed top-1/2 left-1/2 flex justify-center items-center transform -translate-x-1/2 -translate-y-1/2 h-[60vh] w-[calc(100vw-100px)] z-10 flex-col"
+        style="background: #ffffffc4;">
+        <div class="flex flex-col gap-3 text-center">
+            <a (click)="nagation('')" class="mx-4 text-black text-xl no-underline"
+                [ngClass]="{ 'border-b-2 border-black': true }">
+                Home
+            </a>
+            <a (click)="nagation('about')" class="mx-4 text-black text-xl no-underline">
+                About
+            </a>
+            <a (click)="nagation('project')" class="mx-4 text-black text-xl no-underline">Projects
+            </a>
+        </div>
+        <div class="flex pt-7 space-x-3">
+            <img class="h-[28px]" src="./../../../assets/github-6980894_640.png" alt="">
+            <img class="h-[28px]" src="./../../../assets/linked-in-2668700_640.png" alt="">
+            <img class="h-[28px]" src="./../../../assets/instagram-1675670_640.png" alt="">
+            <img class="h-[28px]" src="./../../../assets/phone-ringing-26.png" alt="">
+        </div>
     </div>
-    <div class="flex pt-7 space-x-3">
-        <img class="h-[28px]" src="./../../../assets/github-6980894_640.png" alt="">
-        <img class="h-[28px]" src="./../../../assets/linked-in-2668700_640.png" alt="">
-        <img class="h-[28px]" src="./../../../assets/instagram-1675670_640.png" alt="">
-        <img class="h-[28px]" src="./../../../assets/phone-ringing-26.png" alt="">
-    </div>
-</div>
+</ng-container>
