@@ -2,15 +2,15 @@
     <div class="p-5 flex items-center justify-between">
         <div class="space-x-4">
             <div class="desktop-view flex">
-                <a routerLink="" class="mx-4 text-white no-underline font-bold box active">Home
+                <a routerLink="" class="mx-4 text-white no-underline font-bold box cursor-pointer active">Home
                     <div class="border-bottom border-2 line">
                     </div>
                 </a>
-                <a routerLink="./about" class="mx-4 text-white no-underline font-bold box">About
+                <a routerLink="./about" class="mx-4 text-white no-underline font-bold box cursor-pointer">About
                     <div class="border-bottom border-2 line">
                     </div>
                 </a>
-                <a routerLink="./project" class="mx-4 text-white no-underline font-bold box">Projects
+                <a routerLink="./project" class="mx-4 text-white no-underline font-bold box cursor-pointer">Projects
                     <div class="border-bottom border-2 line">
                     </div>
                 </a>
@@ -45,17 +45,17 @@
     </div>
 </div>
 <ng-container *ngIf="toggle">
-    <div class="fixed top-1/2 left-1/2 flex justify-center items-center transform -translate-x-1/2 -translate-y-1/2 h-[60vh] w-[calc(100vw-100px)] z-10 flex-col"
+    <div class="fixed top-1/2 left-1/2 flex justify-center rounded-2xl border-0 items-center transform -translate-x-1/2 -translate-y-1/2 h-[60vh] w-[calc(100vw-180px)] z-10 flex-col"
         style="background: #ffffffc4;">
         <div class="flex flex-col gap-3 text-center">
-            <a (click)="nagation('')" class="mx-4 text-black text-xl no-underline"
+            <a (click)="nagation('')" class="mx-4 text-black text-xl no-underline cursor-pointer"
                 [ngClass]="{ 'border-b-2 border-black': true }">
                 Home
             </a>
-            <a (click)="nagation('about')" class="mx-4 text-black text-xl no-underline">
+            <a (click)="nagation('about')" class="mx-4 text-black text-xl no-underline cursor-pointer">
                 About
             </a>
-            <a (click)="nagation('project')" class="mx-4 text-black text-xl no-underline">Projects
+            <a (click)="nagation('project')" class="mx-4 text-black text-xl no-underline cursor-pointer">Projects
             </a>
         </div>
         <div class="flex pt-7 space-x-3">
