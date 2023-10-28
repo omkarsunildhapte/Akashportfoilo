@@ -17,7 +17,10 @@
 
 .horizontal-line {
     border-left: 3px solid #53d6ca;
+    transition: border-left 0.3s ease;
+    /* Adjust the duration and easing function as needed */
 }
+
 
 .barline {
     height: 12px;
