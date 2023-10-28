@@ -10,7 +10,7 @@ import { MenuComponent } from './compenet/menu/menu.component';
 import { FooterComponent } from './compenet/footer/footer.component';
 import { ProjectComponent } from './compenet/project/project.component';
 import { AboutComponent } from './compenet/about/about.component';
-
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +25,7 @@ import { AboutComponent } from './compenet/about/about.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,98 @@
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.transition-effect {
+    transition: transform 0.3s ease-in-out;
+}
+
+.horizontal-line {
+    border-left: 3px solid #53d6ca;
+}
+
+.barline {
+    height: 12px;
+    background: #c8d6e5;
+    border-radius: 20px;
+}
+
+.countbar {
+    height: 12px;
+    background: #5f27cd;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: relative;
+    width: 0;
+    transition: width 1s ease;
+}
+
+.countbar h3 {
+    position: absolute;
+    right: -19px;
+    top: -35px;
+    background: #34495e;
+    padding: 4px 6px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 5px;
+}
+
+.countbar h3::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 11px;
+    height: 11px;
+    background: #34495e;
+    transform: rotate(45deg) translateX(-60%);
+}
+
+.animate {
+    width: 100%;
+}
+
+.full {
+    animation: fillAnimation 1s forwards;
+}
+
+@keyframes fillAnimation {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: var(--fill-width);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .mainheader {
+        font-size: 29px;
+        font-weight: bolder;
+    }
+}
+
+/* Styles for medium screens (641px to 1024px) */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    .mainheader {
+        font-size: 59px;
+        font-weight: bolder;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .mainheader {
+        font-size: 59px;
+        font-weight: bolder;
+    }
+}
