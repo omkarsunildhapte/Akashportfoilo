@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,8 +8,14 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   toggle: boolean = false
+  activeLink: any;
   constructor(private router: Router) {
-
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.activeLink = event.url;
+        debugger
+      }
+    });
   }
   nagation(nav: string) {
     this.router.navigate([nav]);

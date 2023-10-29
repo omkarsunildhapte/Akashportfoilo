@@ -2,17 +2,17 @@
     <div class="p-5 flex items-center justify-between">
         <div class="space-x-4">
             <div class="desktop-view flex">
-                <a routerLink="" class="mx-4 text-white no-underline font-bold box cursor-pointer active">Home
-                    <div class="border-bottom border-2 line">
-                    </div>
+                <a routerLink="" [ngClass]="{ 'active': activeLink === '/' }"
+                    class="mx-4 text-white no-underline font-bold box cursor-pointer">Home
+                    <div *ngIf="activeLink != '/'" class="border-bottom border-2 line"></div>
                 </a>
-                <a routerLink="/about" class="mx-4 text-white no-underline font-bold box cursor-pointer">About
-                    <div class="border-bottom border-2 line">
-                    </div>
+                <a routerLink="/about" [ngClass]="{ 'active': activeLink === '/about' }"
+                    class="mx-4 text-white no-underline font-bold box cursor-pointer">About
+                    <div *ngIf="activeLink != '/about'" class="border-bottom border-2 line"></div>
                 </a>
-                <a routerLink="/project" class="mx-4 text-white no-underline font-bold box cursor-pointer">Projects
-                    <div class="border-bottom border-2 line">
-                    </div>
+                <a routerLink="/project" [ngClass]="{ 'active': activeLink === '/project' }"
+                    class="mx-4 text-white no-underline font-bold box cursor-pointer">Projects
+                    <div *ngIf="activeLink != '/project'" class="border-bottom border-2 line"></div>
                 </a>
             </div>
             <div class="mobile-view">
