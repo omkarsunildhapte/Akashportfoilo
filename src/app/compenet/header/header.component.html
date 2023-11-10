@@ -14,6 +14,10 @@
                     class="mx-4 text-white no-underline font-bold box cursor-pointer">Projects
                     <div *ngIf="activeLink != '/project'" class="border-bottom border-2 line"></div>
                 </a>
+                <a routerLink="/testimonial" [ngClass]="{ 'active': activeLink === '/testimonial' }"
+                    class="mx-4 text-white no-underline font-bold box cursor-pointer">Testimonial
+                    <div *ngIf="activeLink != '/testimonial'" class="border-bottom border-2 line"></div>
+                </a>
             </div>
             <div class="mobile-view">
                 <button class="flex-col justify-center items-center" (click)="toggle=!toggle">
@@ -55,7 +59,11 @@
             <a (click)="nagation('about')" class="mx-4 text-black text-xl no-underline cursor-pointer">
                 About
             </a>
-            <a (click)="nagation('project')" class="mx-4 text-black text-xl no-underline cursor-pointer">Projects
+            <a (click)="nagation('project')" class="mx-4 text-black text-xl no-underline cursor-pointer">
+                Projects
+            </a>
+            <a (click)="nagation('testimonial')" class="mx-4 text-black text-xl no-underline cursor-pointer">
+                Testimonial
             </a>
         </div>
         <div class="flex pt-7 space-x-3">

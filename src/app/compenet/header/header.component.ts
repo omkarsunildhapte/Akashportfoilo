@@ -13,7 +13,6 @@ export class HeaderComponent {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.activeLink = event.url;
-        debugger
       }
     });
   }

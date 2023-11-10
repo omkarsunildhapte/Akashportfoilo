@@ -1,0 +1,30 @@
+<div class="container mx-auto">
+    <app-header></app-header>
+    <div class="py-8 md:py-12 lg:py-16">
+        <h1 class="text-white text-center text-4xl sm:text-5xl md:text-6xl 
+            lg:text-7xl xl:text-8xl font-bold fade-up mainheader py-4 px-4">
+            Hear What Our Clients Have to Say
+        </h1>
+    </div>
+    <div class="flex items-center justify-center">
+        <div class="py-3 w-8/12">
+            <ul class="flex flex-col justify-center align-center md:flex-col xl:flex-col
+                     gap-4 sm:gap-8 md:gap-4">
+                <ng-container *ngFor="let item of experience">
+                    <li class="flex flex-col md:flex-row justify-center horizontal-line relative">
+                        <div
+                            class="w-full sm:w-1/2 md:w-1/12 pb-4 flex justify-center md:block  md:absolute left-[-40px] top-[-20px]">
+                            <img [src]="item.clientImg" alt="" class="border-4 border-solid 
+                            w-32 sm:w-32 sm:h-24 md:w-[80px] md:h-[80px] rounded-full bg-white main-color">
+                        </div>
+                        <div class="flex flex-col md:ps-20 w-full sm:w-1/2 md:w-11/12 pb-4">
+                            <span class="text-white">
+                                <span class="text-lg">"</span>{{item.describe}}<span class="text-lg">"</span>
+                            </span>
+                        </div>
+                    </li>
+                </ng-container>
+            </ul>
+        </div>
+    </div>
+</div>
